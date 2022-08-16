@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// set L variable for loading map
+declare const L:any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +14,7 @@ export class AppComponent implements OnInit{
   // positions variables (to use in app.component.html)
   latitude: any 
   longitude: any 
+  
 
   // get position using navigator
   ngOnInit(){
@@ -20,6 +24,15 @@ export class AppComponent implements OnInit{
 
       this.latitude = position.coords.latitude;
       this.longitude = position.coords.longitude;
+
+      // loading leaflet map
+      let map = L.map('map').setView([51.505, -0.09], 13);
+
+      // load map view
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+      }).addTo(map);
     }))
 
     
