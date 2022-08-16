@@ -33,6 +33,9 @@ export class AppComponent implements OnInit{
       maxZoom: 19,
       attribution: '© OpenStreetMap'
       }).addTo(map);
+
+      // marker with current position on map
+      var marker = L.marker([this.latitude, this.longitude]).addTo(map);
     }))
 
     
