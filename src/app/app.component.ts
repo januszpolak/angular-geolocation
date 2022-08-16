@@ -36,6 +36,13 @@ export class AppComponent implements OnInit{
 
       // marker with current position on map
       var marker = L.marker([this.latitude, this.longitude]).addTo(map);
+
+
+      // popup with information 
+      var popup = L.popup()
+    .setLatLng([this.latitude, this.longitude])
+    .setContent("Hej! Jestem dokładnie tutaj :)")
+    .openOn(map);
     }))
 
     
