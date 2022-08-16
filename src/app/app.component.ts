@@ -8,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'angular-geolocation';
 
-
+  // positions variables
   latitude: any 
   longitude: any 
 
+  // get position using navigator
   ngOnInit(){
     navigator.geolocation.getCurrentPosition((position =>{
       console.log(`latitude ${position.coords.latitude}, longitude ${position.coords.longitude}`)
