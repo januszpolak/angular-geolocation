@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'angular-geolocation';
 
-  // positions variables
+  // positions variables (to use in app.component.html)
   latitude: any 
   longitude: any 
 
