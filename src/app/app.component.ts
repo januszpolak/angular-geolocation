@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
       this.longitude = position.coords.longitude;
 
       // loading leaflet map
-      let map = L.map('map').setView([51.505, -0.09], 13);
+      let map = L.map('map').setView([this.latitude, this.longitude], 13);
 
       // load map view
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
