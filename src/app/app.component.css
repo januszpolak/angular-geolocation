@@ -1,1 +1,8 @@
-#map { height: 60vh; }
+
+
+#map { 
+    height: 70vh;
+    width: 70%;
+    margin: 5% auto;
+    
+}
