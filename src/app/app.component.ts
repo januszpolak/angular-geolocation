@@ -41,7 +41,7 @@ export class AppComponent implements OnInit{
       // popup with information 
       var popup = L.popup()
     .setLatLng([this.latitude, this.longitude])
-    .setContent("Hej! Jestem dokładnie tutaj :)")
+    .setContent("Hej! Jesteś dokładnie tutaj :)")
     .openOn(map);
     }))
 
